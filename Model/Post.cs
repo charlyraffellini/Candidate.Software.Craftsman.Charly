@@ -11,6 +11,7 @@ namespace Model
             this.CreationDate = TimeProvider.Instance.Now;
         }
 
+        public User Owner { get; set; }
         public DateTime CreationDate { get; set; }
 
         public string Content { get; set; }

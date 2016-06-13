@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using Konsole;
 using Model;
 
 namespace Parser
@@ -12,12 +13,6 @@ namespace Parser
         }
 
         public abstract void Run(TwitterContext twitterContext);
-
-        protected void PrintPosts(TwitterContext twitterContext, IEnumerable<Post> posts)
-        {
-            posts.ToList()
-                .ForEach(p => twitterContext.Console.WriteLine(p.Content + " (" + p.MinutesSinceCreation + " minutes)"));
-        }
 
         public string Person { get; }
 

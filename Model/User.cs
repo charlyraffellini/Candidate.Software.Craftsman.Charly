@@ -16,6 +16,7 @@ namespace Model
 
         public void AddPost(Post post)
         {
+            post.Owner = this;
             this.Posts.Add(post);
         }
 

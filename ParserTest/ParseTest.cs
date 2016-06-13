@@ -18,7 +18,7 @@ namespace ParserTest
     {
         public ParseTest()
         {
-            this.TestConsole = new TestConsole(40, 20);
+            this.TestConsole = new TestConsole(45, 20);
             this.Context = new TwitterContext(TestConsole);
 
             this.Charlie = new User("Charlie");
@@ -115,7 +115,7 @@ namespace ParserTest
             var result = Grammar.CommandParser.Parse("Charlie");
             result.Run(this.Context);
 
-            var expected = "this is my first post (0 minutes)       \r\nthis is my second post (0 minutes)      ";
+            var expected = "this is my first post (0 minutes)            \r\nthis is my second post (0 minutes)           ";
             this.TestConsole.Buffer.Should().Be(expected);
         }
 
@@ -125,7 +125,7 @@ namespace ParserTest
             var result = Grammar.CommandParser.Parse("Charlie wall");
             result.Run(this.Context);
 
-            var expected = "marco's post (0 minutes)                \r\nthis is my first post (0 minutes)       \r\nthis is my second post (0 minutes)      ";
+            var expected = "Marco - marco's post (0 minutes)             \r\nCharlie - this is my first post (0 minutes)  \r\nCharlie - this is my second post (0 minutes) ";
             this.TestConsole.Buffer.Should().Be(expected);
         }
 

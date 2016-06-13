@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using Model;
 
 namespace Parser
@@ -14,5 +15,15 @@ namespace Parser
         }
 
         public PostPrinter(string person) : base(person) { }
+
+        private void PrintPosts(TwitterContext twitterContext, IEnumerable<Post> posts)
+        {
+            posts.ToList().ForEach(p =>
+            {
+                twitterContext.Console.WriteLine(LineContent(p));
+            });
+        }
+
+        protected virtual string LineContent(Post post) => $"{post.Content} ({post.MinutesSinceCreation} minutes)";
     }
 }
