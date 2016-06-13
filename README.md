@@ -6,7 +6,7 @@
 
 # Solution to exercise
 
-The solution is a REPL which understand a small grammar in order to parse and execute lines.
+The solution is a REPL which understand a small grammar.
 
 The REPL unrestand the operational commands:
 -    posting: \<user name> -> \<message>
@@ -17,7 +17,7 @@ The REPL unrestand the operational commands:
 And an extra creational command:
 -    create user: new \<user name>
 
-It is required that to execute an operational command, previously the creational corresponding command should be executed. The OC can not operate over users which not exist.
+It is required that to execute an operational command, previously the creational corresponding command should be executed. The OC can not operate over users which not exist. Otherwise an error in the console will be showed.
 
 The model was entirely created following TDD practices.
 
