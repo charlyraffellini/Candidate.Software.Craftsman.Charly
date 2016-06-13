@@ -24,6 +24,8 @@ namespace Parser
             });
         }
 
-        protected virtual string LineContent(Post post) => $"{post.Content} ({post.MinutesSinceCreation} minutes)";
+        protected virtual string LineContent(Post post) => $"{post.Content} ({this.TimeLabel(post)})";
+
+        private string TimeLabel(Post post) => post.MinutesSinceCreation == 0 ? post.SecondsSinceCreation + " seconds" : post.MinutesSinceCreation + " minutes";
     }
 }
