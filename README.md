@@ -9,13 +9,13 @@
 The solution is a REPL which understand a small grammar in order to parse and execute lines.
 
 The REPL unrestand the operational commands:
--    posting: <user name> -> <message>
--    reading: <user name>
--    following: <user name> follows <another user>
--    wall: <user name> wall
+-    posting: \<user name> -> \<message>
+-    reading: \<user name>
+-    following: \<user name> follows \<another user>
+-    wall: \<user name> wall
 
 And an extra creational command:
--    create user: new <user name>
+-    create user: new \<user name>
 
 It is required that to execute an operational command, previously the creational corresponding command should be executed. The OC can not operate over users which not exists.
 
@@ -23,7 +23,7 @@ The model was entirely created following TDD practices.
 
 Example of use:
 
-
+![https://raw.githubusercontent.com/charlyraffellini/Candidate.Software.Craftsman.Charly/master/2016-06-13%20(1).png](https://raw.githubusercontent.com/charlyraffellini/Candidate.Software.Craftsman.Charly/master/2016-06-13%20(1).png)
 
 
 ### Used Tools:
