@@ -16,7 +16,7 @@ namespace Model
 
         public string Content { get; set; }
         public TimeSpan TimeSinceCreation => TimeProvider.Instance.Now.Subtract(CreationDate);
-        public int MinutesSinceCreation => this.TimeSinceCreation.Minutes;
-        public int SecondsSinceCreation => this.TimeSinceCreation.Seconds;
+        public int MinutesSinceCreation => (int)this.TimeSinceCreation.TotalMinutes;
+        public int SecondsSinceCreation => (int)this.TimeSinceCreation.TotalSeconds;
     }
 }
