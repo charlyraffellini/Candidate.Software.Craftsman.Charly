@@ -4,12 +4,6 @@ namespace Parser
 {
     public class TwitterContext
     {
-        public TwitterContext()
-        {
-            this.PeopleHome = new PeopleHome();
-            this.Console = new ConsoleWriter();
-        }
-
         public TwitterContext(IConsole console)
         {
             this.PeopleHome = new PeopleHome();

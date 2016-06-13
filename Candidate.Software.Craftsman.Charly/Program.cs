@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Reflection;
 using CLAP;
+using Konsole;
 using Parser;
 using Sprache;
 
@@ -10,7 +11,7 @@ namespace Candidate.Software.Craftsman.Charly
     {
         public static void Main(string[] args)
         {
-            var context = new TwitterContext();
+            var context = new TwitterContext(new ConsoleWriter());
 
             Console.WriteLine("Starting Simple C# Twitter REPL, enter q to quit");
             while (true)
