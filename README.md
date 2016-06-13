@@ -23,7 +23,7 @@ The model was entirely created following TDD practices.
 
 Example of use:
 
-![https://raw.githubusercontent.com/charlyraffellini/Candidate.Software.Craftsman.Charly/master/2016-06-13%20(1).png](https://raw.githubusercontent.com/charlyraffellini/Candidate.Software.Craftsman.Charly/master/2016-06-13%20(1).png)
+![https://raw.githubusercontent.com/charlyraffellini/Candidate.Software.Craftsman.Charly/master/Console.png](https://raw.githubusercontent.com/charlyraffellini/Candidate.Software.Craftsman.Charly/master/Console.png)
 
 
 ### Used Tools:
