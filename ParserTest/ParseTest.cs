@@ -115,9 +115,7 @@ namespace ParserTest
             var result = Grammar.CommandParser.Parse("Charlie");
             result.Run(this.Context);
 
-            var expected =
-@"this is my first post (0 minutes)       
-this is my second post (0 minutes)      ";
+            var expected = "this is my first post (0 minutes)       \r\nthis is my second post (0 minutes)      ";
             this.TestConsole.Buffer.Should().Be(expected);
         }
 
@@ -127,10 +125,7 @@ this is my second post (0 minutes)      ";
             var result = Grammar.CommandParser.Parse("Charlie wall");
             result.Run(this.Context);
 
-            var expected =
-@"marco's post (0 minutes)                
-this is my first post (0 minutes)       
-this is my second post (0 minutes)      ";
+            var expected = "marco's post (0 minutes)                \r\nthis is my first post (0 minutes)       \r\nthis is my second post (0 minutes)      ";
             this.TestConsole.Buffer.Should().Be(expected);
         }
 
