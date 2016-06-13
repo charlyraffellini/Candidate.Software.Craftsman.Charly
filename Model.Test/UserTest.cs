@@ -33,7 +33,7 @@ namespace Model.Test
         [Fact]
         public void Marco_can_follow_Charly()
         {
-            Marco.PeopleWhoFollow.ShouldBeEquivalentTo(new List<User>{Charly});
+            Marco.WhoIFollow.ShouldBeEquivalentTo(new List<User>{Charly});
         }
 
         [Fact, FreezeClock]

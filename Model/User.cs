@@ -26,7 +26,9 @@ namespace Model
             this.PeopleWhoFollow.Add(anotherUser);
         }
 
-        public ICollection<User> PeopleWhoFollow { get; private set; }
+        public ICollection<User> WhoIFollow => PeopleWhoFollow;
+
+        private ICollection<User> PeopleWhoFollow { get; }
 
         public IEnumerable<Post> AggregatePosts => PeopleWhoFollow
             .SelectMany(u => u.Posts)
